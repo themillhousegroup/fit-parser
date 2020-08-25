@@ -60,6 +60,7 @@
     "url": "git+ssh://git@github.com/jimmykane/fit-parser.git"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "example-output": "node_modules/gulp/bin/gulp.js; node examples/example.js examples/example.fit > examples/output.json",
     "example": "node_modules/gulp/bin/gulp.js; node examples/example.js examples/example.fit",
     "test": "node_modules/gulp/bin/gulp.js;",
@@ -68,5 +69,8 @@
   "version": "1.8.3",
   "dependencies": {
     "buffer": "^5.1.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }

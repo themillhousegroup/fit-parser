@@ -758,6 +758,18 @@ var FIT = exports.FIT = {
       253: { field: 'timestamp', type: 'date_time', scale: null, offset: 0, units: '' },
       0: { field: 'enabled', type: 'byte', scale: null, offset: 0, units: '' }
     },
+    151: { // https://docs.rs/fit-sdk/0.1.0/src/fit_sdk/home/cratesfyi/cratesfyi/debug/build/fit-sdk-53c42f2088a3e4b8/out/message_definitions.rs.html#9446
+      name: 'segment_file',
+      254: { field: 'message_index', type: 'message_index', scale: null, offset: 0, units: '' },
+      1: { field: 'file_uuid', type: 'string', scale: null, offset: 0, units: '' },
+      3: { field: 'enabled', type: 'bool', scale: null, offset: 0, units: '' },
+      4: { field: 'user_profile_primary_key', type: 'uint32', scale: null, offset: 0, units: '' },
+      7: { field: 'leader_type', type: 'segment_leaderboard_type', scale: null, offset: 0, units: '' },
+      8: { field: 'leader_group_primary_key', type: 'uint32', scale: null, offset: 0, units: '' },
+      9: { field: 'leader_activity_id', type: 'uint32', scale: null, offset: 0, units: '' },
+      10: { field: 'leader_activity_id_string', type: 'string', scale: null, offset: 0, units: '' },
+      11: { field: 'default_race_leader', type: 'uint8', scale: null, offset: 0, units: '' }
+    },
     206: {
       name: 'field_description',
       0: { field: 'developer_data_index', type: 'uint8', scale: null, offset: 0, units: '' },

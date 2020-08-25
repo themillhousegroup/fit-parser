@@ -105,6 +105,7 @@ var FitParser = function () {
       var file_ids = [];
       var monitor_info = [];
       var lengths = [];
+      var segment_file = [];
 
       var tempLaps = [];
       var tempLengths = [];
@@ -217,7 +218,11 @@ var FitParser = function () {
           case 'software':
             fitObj.software = message;
             break;
+          case 'segment_file':
+            segment_file.push(message);
+            break;
           default:
+            console.log('Event of type: ' + messageType);
             if (messageType !== '') {
               fitObj[messageType] = message;
             }
@@ -239,6 +244,7 @@ var FitParser = function () {
         fitObj.sessions = sessions;
         fitObj.laps = laps;
         fitObj.lengths = lengths;
+        fitObj.segment_file = segment_file;
         fitObj.records = records;
         fitObj.events = events;
         fitObj.device_infos = devices;
